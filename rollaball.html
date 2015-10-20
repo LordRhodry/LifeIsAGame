@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Unity Web Player | Rollaball</title>
+		<!--<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>-->
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+	
+	
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+ 
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" /> 
+		<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 960, 
+				height: 600,
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+				
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "Rollaball.unity3d");
+			});
+		-->
+		</script>
+		<style type="text/css">
+		<!--
+		body {
+			font-family: Helvetica, Verdana, Arial, sans-serif;
+			background-color: white;
+			color: black;
+			text-align: center;
+		}
+		a:link, a:visited {
+			color: #000;
+		}
+		a:active, a:hover {
+			color: #666;
+		}
+		p.header {
+			font-size: small;
+		}
+		p.header span {
+			font-weight: bold;
+		}
+		p.footer {
+			font-size: x-small;
+		}
+		div.content {
+			margin: auto;
+			width: 960px;
+		}
+		div.broken,
+		div.missing {
+			margin: auto;
+			position: relative;
+			top: 50%;
+			width: 193px;
+		}
+		div.broken a,
+		div.missing a {
+			height: 63px;
+			position: relative;
+			top: -31px;
+		}
+		div.broken img,
+		div.missing img {
+			border-width: 0px;
+		}
+		div.broken {
+			display: none;
+		}
+		div#unityPlayer {
+			cursor: default;
+			height: 600px;
+			width: 960px;
+		}
+		-->
+		</style>
+	</head>
+	<body>
+	<div id="background">
+		<div id="header">
+			<div>
+				<div>
+					<a href="index.html" class="logo"><img src="images/coollogo.png" alt=""></a>
+					<ul>
+						<li class="selected">
+							<a href="index.html" id="menu1">About Julien</a>
+						</li>
+						<li>
+							<a href="media.html" id="menu2">My Projects</a>
+						</li>
+						<li>
+							<a href="games.html" id="menu3">PLAY</a>
+						</li>
+						<li>
+							<a href="about.html" id="menu4">My Github</a>
+						</li>
+						<li>
+							<a href="blog.html" id="menu5">The Right Hand</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="body">
+			<div>
+				<div>
+					<div class="games">
+					<!--	<div class="content" bgcolor="black" link="#ffff00" vlink="yellow" marginwidth=5 marginheight=1 topmargin=1 leftmargin=5> 
+
+		<p class="header"><span>Unity Web Player | </span>Rollaball</p>-->
+		<div class="content" style="margin:0px 0px 0px 0px;">
+			<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+				<div class="broken">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>-->
+		
+					
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<ul>
+					<li id="facebook">
+						<a href="https://www.facebook.com/julien.guerand" target=blank>facebook</a>
+					</li>
+					<li id="linkedin">
+						<a href="https://www.linkedin.com/in/jguerand" target=blank>linkedin</a>
+					</li>
+					<li id="googleplus">
+						<a href="https://plus.google.com/u/0/104567973471734226955/posts" target=blank>googleplus</a>
+					</li>
+				</ul>
+				<p>
+					@ copyright 2015. all rights reserved.
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	</body>
+</html>

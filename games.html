@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<!-- Website Template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>LIAG - My Games</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript">
+		function fusion1()
+		{
+			var operator = ($( "#operator1" ).val())*1;
+			var operande = ($( "#operande1" ).val())*1;
+			var value = operator*3 + operande +1;
+			console.log("fusion.html?level="+value);
+			window.location.href= "fusion.html?level="+value;
+		}
+		function fusion2()
+		{
+			var operator = ($( "#operator2" ).val())*1;
+			var operande = ($( "#operande2" ).val())*1;
+			var value = operator*3 + operande +1;
+			console.log("fusion.html?level="+value);
+			window.location.href= "fusion2.html?level="+value;
+		}
+		/*function memory()
+		{
+			var aiLevel= ($( "#ai" ).val())*1;
+			var tiles = ($( "#tiles" ).val())*1;
+			var value = aiLevel*3 + tiles +1;
+			console.log("fusion.html?level="+value);
+			window.location.href= "fusion.html?level="+value;
+		}*/
+	</script>
+	
+</head>
+<body>
+	<div id="background">
+		<div id="header">
+			<div>
+				<div>
+					<a href="index.html" class="logo"><img src="images/coollogo.png" alt=""></a>
+					<ul>
+						<li class="selected">
+							<a href="index.html" id="menu1">About Julien</a>
+						</li>
+						<li>
+							<a href="media.html" id="menu2">My Projects</a>
+						</li>
+						<li>
+							<a href="games.html" id="menu3">PLAY</a>
+						</li>
+						<li>
+							<a href="about.html" id="menu4">My Github</a>
+						</li>
+						<li>
+							<a href="blog.html" id="menu5">The Right Hand</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="body">
+			<div>
+				<div>
+					<div class="games">
+						<div class="content">
+							<h3>My math games</h3>
+							<ul>
+								<li>
+									<a href="fusion.html?level=1" class="figure"><img src="images/fusion2.png" alt=""></a>
+									<span>Fuse identical Tiles with:
+									<form>
+									<select id="operator1">
+										<option value="0">+</option>
+										<option value="1">X</option>
+										<option value="2">-</option>
+										<option value="3">/</option>
+									</select>
+									<select id="operande1">
+										<option value="0">2</option>
+										<option value="1">3</option>
+										<option value="2">4</option>
+									</select>
+									<button value="Play" onclick="fusion1();return false;">Play</button>
+									</form>
+									Fuse following a rule
+									<form>
+									<select id="operator2">
+										<option value="0">+</option>
+										<option value="1">X</option>
+										<option value="2">-</option>
+										<option value="3">/</option>
+									</select>
+									<select id="operande2">
+										<option value="0">2</option>
+										<option value="1">3</option>
+										<option value="2">4</option>
+									</select>
+									<button value="Play" onclick="fusion2();return false;">Play</button>
+									</form>
+									</span>
+								</li>
+								<li>
+									<a href="memory.html" class="figure"><img src="images/memory2.png" alt=""></a> 
+									<span><a href="memory.html">
+									Play Number Memory agains the AI.</a>
+									<!--<form>
+									<select id="ai">
+										<option value="0">+</option>
+										<option value="1">X</option>
+										<option value="2">-</option>
+										<option value="3">/</option>
+									</select>
+									<select id="tiles">
+										<option value="0">2</option>
+										<option value="1">3</option>
+										<option value="2">4</option>
+									</select>
+									<button value="Play" onclick="memory();return false;">Play</button>
+									</form>-->
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="aside">
+							<h3>unity tutorials</h3>
+							<ul>
+								<li>
+									<a href="rollaball.html" class="figure"><img src="images/rollaball.jpg" alt=""></a>
+									<span><a href="rollaball.html">Rollaball</a></span>
+								</li>
+								<li>
+									<a href="shooter.html" class="figure"><img src="images/space-shooter.png" alt=""></a>
+									<span><a href="shooter.html">Shooter</a></span>
+								</li>
+								<li>
+									<a href="survival.html" class="figure"><img src="images/survival.jpg" alt=""></a>
+									<span><a href="survival.html">3rd person Survival Horror</a></span>
+								</li>
+								<!--<li>
+									<a href="#" class="figure"><img src="images/game4.jpg" alt=""></a>
+									<span><a href="#">This is just a place holder</a></span>
+								</li>
+								<li>
+									<a href="#" class="figure"><img src="images/game5.jpg" alt=""></a>
+									<span><a href="#">This is just a place holder</a></span>
+								</li>
+								<li>
+									<a href="#" class="figure"><img src="images/game6.jpg" alt=""></a>
+									<span><a href="#">This is just a place holder</a></span>
+								</li>-->
+							</ul>
+						</div>
+						<!-- <div class="article">
+							<p>
+							</p>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<ul>
+					<li id="facebook">
+						<a href="https://www.facebook.com/julien.guerand" target=blank>facebook</a>
+					</li>
+					<li id="linkedin">
+						<a href="https://www.linkedin.com/in/jguerand" target=blank>linkedin</a>
+					</li>
+					<li id="googleplus">
+						<a href="https://plus.google.com/u/0/104567973471734226955/posts" target=blank>googleplus</a>
+					</li>
+				</ul>
+				<p>
+					@ copyright 2015. all rights reserved.
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

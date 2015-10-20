@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>LIAG: Math Fusion type 2</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+	
+	
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+ 
+<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" /> 
+<!--	<link rel="stylesheet" type="text/css" href="/common/jquery.toast.min.css" >
+	<script type="text/javascript" src="/common/jquery.toast.min.js"></script>
+	<script src="/common/jqueryui-1.9.1/jquery-ui-1.9.1.custom.min.js" type='text/javascript'></script> -->
+
+	<script type='text/javascript' src='js/Numbergame2.js'></script>
+
+
+</head>
+<body >  
+<div id="background">
+		<div id="header">
+			<div>
+				<div>
+					<a href="index.html" class="logo"><img src="images/coollogo.png" alt=""></a>
+					<ul>
+						<li class="selected">
+							<a href="index.html" id="menu1">About Julien</a>
+						</li>
+						<li>
+							<a href="media.html" id="menu2">My Projects</a>
+						</li>
+						<li>
+							<a href="games.html" id="menu3">PLAY</a>
+						</li>
+						<li>
+							<a href="about.html" id="menu4">My Github</a>
+						</li>
+						<li>
+							<a href="blog.html" id="menu5">The Right Hand</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="body">
+			<div>
+				<div>
+					<div class="games">
+						<div class="content" bgcolor="black" link="#ffff00" vlink="yellow" marginwidth=5 marginheight=1 topmargin=1 leftmargin=5> 
+							<div id="block">
+							<h1>Number fusion 2</h1>
+							<p id="rules">Temp text</p><br>
+							Your score : <input type="number" value=0 id="myscore"><br><br>
+							Best score : <input type="number" value=0 id="bestscore">
+							</div>
+
+							<div id= "gamearea">
+							<canvas id="gameCanvas" height="500px" width="500px" style="border:1px solid #000000;"></canvas> 
+							</div>
+						</div>
+
+
+<
+		
+
+							<div class="aside" style="position:relative; right:-20px; width:40%; top: 180px;">
+					
+								<p> In this game, each turn you chose a valid gravity orientation by pressing the corresponding arrow key. (Valid means it makes tiles move). <br><br>
+							If the movement makes two tiles with the same value collide into each other they fuse using the rule of the day.<br><br>
+							After Each movement a tile is randomly added to the board. <br>
+							You lose if there are no valid movement left.<br><br>
+							You score points for each fusion you create (the harder the tile you createis to obtain, the more points it gives you).<br>
+							Good luck!</p>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<ul>
+					<li id="facebook">
+						<a href="https://www.facebook.com/julien.guerand" target=blank>facebook</a>
+					</li>
+					<li id="linkedin">
+						<a href="https://www.linkedin.com/in/jguerand" target=blank>linkedin</a>
+					</li>
+					<li id="googleplus">
+						<a href="https://plus.google.com/u/0/104567973471734226955/posts" target=blank>googleplus</a>
+					</li>
+				</ul>
+				<p>
+					@ copyright 2015. all rights reserved.
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+ </body>
+  <div id="dialog" title="Game Over">
+	Try Again?
+ </div>
+ <div id="dialog2" title="Victory!">
+	You won this game!<br>
+	You can contune playing to get a high score or you can start a new game.
+ </div>
+</html>
