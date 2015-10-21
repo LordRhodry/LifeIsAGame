@@ -443,7 +443,7 @@ function findDiv()
 				combo[combo.length]=test;
 			}
 			test = cardlist[i].val/cardlist[j].val;
-						if (isInt(test))
+			if (isInt(test))
 			{
 				combo[combo.length]=test;
 			}
@@ -455,7 +455,13 @@ function findDiv()
 	}
 	else 
 	{
-		return combo[Math.floor(Math.random()*combo.length)];
+		var valfound = combo[Math.floor(Math.random()*combo.length)];
+		if (valfound == 0)
+		{
+			return -1;
+		}
+		return valfound;
+		
 	}
 }
 

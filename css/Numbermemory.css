@@ -99,6 +99,8 @@
 }
 
 .back p {
+			position:relative;
+			top: 30px;
 			bottom: 10px;
 			left: 0;
 			right: 0;
