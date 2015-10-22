@@ -5,7 +5,10 @@
 	<meta charset="UTF-8">
 	<title>LIAG - My Games</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	
 	<script type="text/javascript">
 		function fusion1()
 		{
@@ -23,6 +26,8 @@
 			console.log("fusion.html?level="+value);
 			window.location.href= "fusion2.html?level="+value;
 		}
+		
+
 		/*function memory()
 		{
 			var aiLevel= ($( "#ai" ).val())*1;
@@ -32,6 +37,49 @@
 			window.location.href= "fusion.html?level="+value;
 		}*/
 	</script>
+	<style type="text/css">
+		label.custom-select {
+    position: relative;
+    display: inline-block;
+
+}
+
+    .custom-select select {
+        display: inline-block;
+        padding: 4px 3px 3px 5px;
+        margin: 0;
+        font: inherit;
+        outline:none; /* remove focus ring from Webkit */
+        line-height: 1.2;
+        background: #333333;
+        color:white;
+        border:0;
+    }
+
+
+
+
+    /* Select arrow styling */
+    .custom-select:after {
+        content: "▼";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 60%;
+        line-height: 30px;
+        padding: 0 7px;
+        background: #333333;
+        color: white;
+		
+    }
+    
+    .no-pointer-events .custom-select:after {
+        content: none;
+    }
+
+	</style>
+
 	
 </head>
 <body>
@@ -69,38 +117,51 @@
 							<ul>
 								<li>
 									<a href="fusion.html?level=1" class="figure"><img src="images/fusion2.png" alt=""></a>
-									<span>Fuse identical Tiles with:
-									<form>
-									<select id="operator1">
+									<span><form> &nbsp Fuse identical Tiles with:
+									
+									
+									
+									
+									
+									
+									<label class="custom-select">
+									<select id="operator1" class="selectmenu" style="width:auto;">
 										<option value="0">+</option>
 										<option value="1">X</option>
 										<option value="2">-</option>
 										<option value="3">/</option>
 									</select>
-									<select id="operande1">
+									</label>
+									<label class="custom-select">
+									<select id="operande1" style="width:auto;">
 										<option value="0">2</option>
 										<option value="1">3</option>
 										<option value="2">4</option>
 									</select>
+									</label>
 									<button value="Play" onclick="fusion1();return false;">Play</button>
 									</form>
-									Fuse following a rule
-									<form>
-									<select id="operator2">
+										<form>
+									&nbsp Fuse following a rule:
+									<label class="custom-select">
+									<select id="operator2" value="0">
 										<option value="0">+</option>
 										<option value="1">X</option>
 										<option value="2">-</option>
 										<option value="3">/</option>
 									</select>
-									<select id="operande2">
+									</label>
+									<label class="custom-select">
+									<select id="operande2" value="0">
 										<option value="0">2</option>
 										<option value="1">3</option>
 										<option value="2">4</option>
 									</select>
+									</label>
 									<button value="Play" onclick="fusion2();return false;">Play</button>
 									</form>
 									</span>
-								</li>
+
 								<li>
 									<a href="memory.html" class="figure"><img src="images/memory2.png" alt=""></a> 
 									<span><a href="memory.html">
