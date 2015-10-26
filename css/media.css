@@ -1,0 +1,18 @@
+.figure :hover {
+opacity:0.8;
+}
+
+#body .media div div ul li div span {
+	color: #a7a9ac;
+	display: block;
+	font-size: 12px;
+	line-height: 38px;
+	margin: 0;
+	padding: 0 9px;
+	text-align: center;
+	text-decoration: none;
+}
+#body .media div div ul li  div span :hover {
+	color: #fff;
+}
+
