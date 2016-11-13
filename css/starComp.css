@@ -71,6 +71,9 @@ header {
 .starName 
 {
 	display : block;
+	height: 2.05em; // that's one line, 2em for 2 lines, etc...
+    line-height: 1em; // the height of one text line
+    overflow: hidden;
 }
 
 .starImg {
