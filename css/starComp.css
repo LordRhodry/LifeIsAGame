@@ -1,0 +1,172 @@
+@keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+}
+
+html, body {
+	height:100%;
+}
+
+.blink {
+  animation: blink 1s step-start 0s infinite;
+  -webkit-animation: blink 1s step-start 0s infinite;
+}
+
+.hidden {
+	display: none;
+}
+
+header {
+	text-align:center;
+}
+
+#deck {
+	background-image: url("../images/galaxy.jpg");
+	background-position: center;
+	background-size:100px;
+	width:100px;
+	height: 100px;
+	display:table;
+	float:left;
+}
+
+#deckInner {
+	color : red;
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+}
+
+.myCard {
+	margin:0.5%;
+	text-align: center;
+	float:left;
+	border : 2px solid green;
+	border-radius: 10px;
+}
+
+
+
+#gameAreaTop {
+	display:inline-block;
+	width:100%;
+	height:30%;
+	background-color: lightBlue;
+}
+
+#gameAreaBottom {
+	display: inline-block;
+	width : 100%;
+	height : 60%;
+	background-color: lightGrey;
+}
+
+.starName 
+{
+	display : block;
+}
+
+.starImg {
+	width :90%;
+
+}
+
+.starComp {
+	margin:2%;
+	width : 90%;
+}
+
+.aStar {
+	width : 8%;
+	margin:0.3%;
+	/*height : 100%;*/
+	text-align: center;	
+	/*display:inline-block;*/
+	float:left;
+	border : 2px solid blue;
+	border-radius: 10px;
+}
+
+#ruler {
+	width:20%;
+	float: right;
+}
+
+#ruler > img {
+	width : 100%;
+}
+
+.previous , .tested, .next {
+	float:left;
+}
+
+.finalComp {
+	width : 40%;
+	float:left;
+	margin : 2%;
+}
+
+.right {
+	width : 50%;
+	position:absolute;
+	bottom:20%;
+	left:30%;
+}
+
+.right > img {
+	width:100%;
+}
+
+.wrong {
+	width : 50%;
+	position:absolute;
+	bottom:5%;
+	left:30%;
+}
+
+.wrong > img {
+	width:90%;
+}
+
+.backOfCard {
+	width: 10%;
+	height : 20%;
+	
+}
+
+.backOfCard > img {
+	width : 100%;
+	height:100%;
+}
+
+.finger {
+	position : absolute;
+	width: 10%;
+	height : 20%;
+	animation : translate 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes translate {
+
+  0% {
+    top: 20%;
+    left : 10%;
+  }
+
+  100% {
+    top:50%;
+    left:50%;
+  }
+}
+
+.finger > img {
+	width : 100%;
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+	<title> Star size Comparison</title>
+	<link rel="stylesheet" href="css/starComp.css" type="text/css">
+	
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="css/jquery-ui.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+
+	<script src="js/stardata.js"></script>
+	<script src="js/starGame.js"></script>
+
+</head>
+
+<body>
+
+	<header><h1>Star Line</h1> </header>
+	<div id="gameAreaTop" class="connectedSortable top">
+		<div id="deck" > <div id="deckInner" >Remaining: <br><br> <span id="count">9</span> </div> </div>
+		<div id="ruler" class="hidden"><img src="images/ruler.png"></div>
+
+		
+
+	</div>
+	<div id="gameAreaBottom" class = "connectedSortable bottom">
+		
+		<div class="aStar" id="1"> <span class="starName">The Earth</span><img class="starImg" src="images/earth.jpg"><img class="starComp" src="images/fly.jpg"> </div>
+		
+		
+
+	</div>
+
+<!-- this contains the element pre-built to use in the different part of the game -->
+<div class="hidden">
+	
+	<div class="finger"><img src="images/finger.svg"></div>
+	<div class="right"><img src="images/right.png"></div>
+	<div class="wrong"><img src="images/wrong.png"></div>
+	
+	<div class = "backOfCard"><img  src="images/galaxy.jpg"></div> 
+
+	<div class="myCard"> <div class="starName">The Sun</div><img class="starImg" src="images/sun.jpg"><img class="starComp hidden" src="images/question.png"></div>
+
+	<div class="comparisonDialog">
+		<div class="previous">
+			<span class="starName"></span>
+			<img class="starImg">
+		</div>
+		<div class="tested">
+			<span class="starName"></span>
+			<img class="starImg">
+		</div>
+		<div class="next">
+			<span class="starName"></span>
+			<img class="starImg">
+		</div>
+	</div>
+
+	<div id="winScreen">
+		<p> Here is another way to look at the size of stars.</p>
+		<div class="finalComp"><img src="images/comp1.png"></div>
+		<div class="finalComp"><img src="images/comp2.png"></div>
+	</div>
+
+</div> <!-- end of hidden area -->
+
+
+</body>
+
+</html>
