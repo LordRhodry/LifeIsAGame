@@ -88,7 +88,7 @@ function resize()
 {
 	var div= $(".current");
 	var width = 0.2 * $('#gameAreaTop').width();
-	var height = $('#gameAreaTop').height();
+	var height = $('#gameAreaTop').height() * 0.8 ;
 	if (div.parent().hasClass("bottom"))
 	{
 		var width = 0.08 * $('#gameAreaBottom').width();
